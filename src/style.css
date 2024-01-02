@@ -1,0 +1,456 @@
+* {
+  user-select: none;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* App.js */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.container .card {
+  width: 35%;
+  height: 75vh;
+  /* border: 2px solid black; */
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px #999999;
+}
+
+.container .card .header {
+  width: 100%;
+  height: 12%;
+  /* padding: 20px; */
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 2px 2px 10px #999999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* card's header */
+
+.card .header .h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  color: black;
+}
+
+.card .header button {
+  padding: 6px 7px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+  background: inherit;
+  border-radius: 5px;
+  transition: .2s;
+}
+
+.card .header button:active {
+  padding: 5px 6px;
+  font-size: 14px;
+}
+
+/* card's body */
+
+.body {
+  width: 100%;
+  height: 88%;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/* Create.js */
+
+.create-section {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-section h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: inherit;
+  /* width: 90px; */
+  padding: 10px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.2s;
+  margin: 20px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: .2s;
+}
+
+.close-modal.active {
+  position: fixed;
+  top: 0;
+  right: 0%;
+}
+
+.close-modal:active {
+  padding: 5px;
+}
+
+.create-section .close-modal h2 {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s;
+}
+
+.close-modal:active h2 {
+  font-size: 15px;
+}
+
+/* form */
+
+.create-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-section form input {
+  width: 80%;
+  height: 40px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.create-section form textarea {
+  width: 80%;
+  height: 150px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+.create-section form button {
+  width: 80%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.583);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.create-section form button:active {
+  width: 75%;
+  height: 30px;
+}
+
+/* Home.js */
+
+.todos-section {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todos-section .todo {
+  width: 100%;
+  box-shadow: 2px 2px 10px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* todo left */
+
+.todos-section .todo .todo-left {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.todos-section .todo .todo-left input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  border: none;
+}
+
+.todos-section .todo .todo-left .todo-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.todos-section .todo .todo-left .todo-title h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.todos-section .todo .todo-left .todo-title h2.completed {
+  text-decoration: line-through;
+}
+
+.todos-section .todo .todo-left .todo-title p {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* todo right */
+
+.todos-section .todo .todo-right {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.todos-section .todo .todo-right button {
+  margin-right: 10px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+
+.todos-section .todo .todo-right button:active {
+  padding: 3px 7px;
+  font-size: 13px;
+}
+
+/* todo detail section */
+
+.todo-detail-section {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.todo-detail-section .todo-detail-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-detail-section .todo-detail-header h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.todo-detail-section .todo-detail-header button {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  border-radius: 5px;
+  background: inherit;
+  border: 1.2px solid black;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.todo-detail-section .todo-detail-header button:active {
+  padding: 3px 7px;
+  font-size: 13px;
+}
+
+.todo-detail-section .todo-detail-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-detail-section .todo-detail-body p {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.todo-detail-section .todo-detail-body .delete-todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.todo-detail-section .todo-detail-body .delete-todo button {
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.434);
+  display: flex;
+  align-items: center;
+  transition: .2s;
+  font-size: 15px;
+}
+
+.todo-detail-section .todo-detail-body .delete-todo button:active {
+  padding: 3px 7px;
+  font-size: 13px;
+}
+
+/* Loading */
+
+.loading-text {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .container .card {
+    width: 50%;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .card {
+    width: 80%;
+    height: 95vh;
+    margin: 0
+  }
+}
+
+
+@media screen and (max-width: 525px) {
+  .todos-section .todo .todo-left .todo-title h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+  }  
+
+  .todos-section .todo .todo-right button {
+    margin: 5px;
+    padding: 3px 7px;
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 475px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-modal.active {
+    position: fixed;
+    top: 120px;
+    right: 0%;
+    background: #ccc;
+  }
+
+  .container .card {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .container .card .header {
+    border-radius: 0;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .create-section h1 {
+    text-align: center;
+  }
+
+  .create-section form input {
+    width: 100%;
+  }
+
+  .create-section form textarea {
+    width: 100%;
+  }
+
+  .create-section form button {
+    width: 100%;
+  }
+}
