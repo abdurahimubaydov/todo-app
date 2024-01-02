@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Create from "./pages/create";
 import EditTodo from "./pages/edit-todo";
 import TodoDetail from "./pages/todo-detail";
+import PageError from "./pages/page-error";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/todos/edit/:id" element={<EditTodo />} />
             <Route path="/todos/:id" element={<TodoDetail />} />
+            <Route path="*" element={<PageError />} />
           </Routes>
         </div>
       </div>
