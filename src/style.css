@@ -409,6 +409,10 @@ body {
   }
 }
 
+[class^='ResizePanel-module_ResizeBarVertical'] {
+  margin-bottom: 0 !important;
+}
+
 
 /* Error page.js */
 
